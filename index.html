@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>BÀI TẬP JS BUỔI 7 8 - TRANG LUC</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-12 col-lg-4 py-2">
+
+            <label for="">Nhập các số tùy ý</label>
+            <input type="text" class="form-control" id="inputNum" placeholder="Nhập">
+            <button class="btn btn-success mt-3" id="themSo">Thêm số</button>
+        </div>
+        <div class="alert alert-info my-4">
+            <strong>👉🏽</strong>
+            <span id="Result"></span>
+        </div>
+        <div id="accordion">
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        1️⃣ Tổng số dương
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="btn btn-success mt-3" id="btnTongSoDuong">Tính tổng</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽 Tổng số dương:</strong>
+                            <span id="ketQua1"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                        2️⃣ Đếm số dương
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="btn btn-success mt-3" id="btnDemSo">Đếm số dương</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽 Số dương:</strong>
+                            <span id="ketQua2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                        3️⃣ Tìm số nhỏ nhất
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="btn btn-success mt-3" id="btnSoNhoNhat">Tìm số nhỏ nhất</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽 Số nhỏ nhất:</strong>
+                            <span id="ketQua3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                        4️⃣ Tìm số dương nhỏ nhất
+                    </a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="btn btn-success mt-3" id="btnSoDuongNhoNhat">Tìm số dương nhỏ nhất</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽 Số dương nhỏ nhất:</strong>
+                            <span id="ketQua4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                        5️⃣ Tìm số chẵn cuối cùng
+                    </a>
+                </div>
+                <div id="collapseFive" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="btn btn-success mt-3" id="btnSoChan">Tìm số chẵn</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽 Số chẵn cuối cùng:</strong>
+                            <span id="ketQua5"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
+                        6️⃣ Đổi chỗ
+                    </a>
+                </div>
+                <div id="collapseSix" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="d-flex align-item-center">
+                            <input type="text" class="form-control mr-1" id="inputNum1" placeholder="Nhập số vị trí 1">
+                            <input type="text" class="form-control ml-1" id="inputNum2" placeholder="Nhập số vị trí 2">
+                        </div>
+                        <button class="btn btn-success mt-3" id="btnDoiCho">Đổi chỗ</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽 Mảng sau khi đổi:</strong>
+                            <span id="ketQua6"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseSeven">
+                        7️⃣ Sắp xếp tăng dần
+                    </a>
+                </div>
+                <div id="collapseSeven" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="btn btn-success mt-3" id="btnSapXep">Sắp xếp</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽 Mảng sau khi sắp xếp:</strong>
+                            <span id="ketQua7"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseEight">
+                        8️⃣ Tìm số nguyên tố đầu tiên
+                    </a>
+                </div>
+                <div id="collapseEight" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="btn btn-success mt-3" id="btnNguyenTo">Tìm số nguyên tố</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽 Kết quả: </strong>
+                            <span id="ketQua8"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseNine">
+                        9️⃣ Đếm số nguyên
+                    </a>
+                </div>
+                <div id="collapseNine" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <div>
+                            <p><b>Bước 1:</b> Nhập ngẫu nhiên các số và bấm "Thêm số" để lưu vào hệ thống</p>
+                            <input type="text" placeholder="Nhập" id="inputNum9">
+                            <button class="btn btn-success" id="btnThemSo">Thêm số</button>
+                            <div class="alert alert-success my-4">
+                                <strong>👉🏽 Các số đã thêm: </strong>
+                                <span id="ketQua9"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p><b>Bước 2:</b> Đếm số nguyên từ các số đã nhập</p>
+                            <button class="btn btn-success">Thêm số</button>
+                            <div class="alert alert-success my-4" id="btnDemSoNguyen">
+                                <strong>👉🏽 Đếm số nguyên:</strong>
+                                <span id="ketQua10"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTen">
+                        🔟 So sánh số lượng số âm và số dương
+                    </a>
+                </div>
+                <div id="collapseTen" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="btn btn-success mt-3" id="btnSoSanh">So sánh</button>
+                        <div class="alert alert-success my-4">
+                            <strong>👉🏽</strong>
+                            <span id="ketQua11"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
